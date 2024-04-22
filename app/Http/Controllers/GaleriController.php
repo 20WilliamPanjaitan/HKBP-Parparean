@@ -6,7 +6,13 @@ use Illuminate\Http\Request;
 
 class GaleriController extends Controller
 {
-    public function index(){
-        return view('galeri');
+    public function index()
+    {
+        return view(
+            'galeri',
+            [
+                "title" => "galeri"
+            ]
+        );
     }
 }

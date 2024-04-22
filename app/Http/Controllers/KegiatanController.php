@@ -8,6 +8,11 @@ class KegiatanController extends Controller
 {
     public function index()
     {
-        return view('kegiatan');
+        return view(
+            'kegiatan',
+            [
+                "title" => "berita"
+            ]
+        );
     }
 }

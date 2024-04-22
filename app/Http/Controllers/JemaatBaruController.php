@@ -8,6 +8,11 @@ class JemaatBaruController extends Controller
 {
     public function index()
     {
-        return view('jemaat_baru');
+        return view(
+            'jemaat_baru',
+            [
+                "title" => "layanan"
+            ]
+        );
     }
 }

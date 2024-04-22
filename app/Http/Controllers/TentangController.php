@@ -8,6 +8,11 @@ class TentangController extends Controller
 {
     public function index()
     {
-        return view('tentang');
+        return view(
+            'tentang',
+            [
+                "title" => "tentang"
+            ]
+        );
     }
 }

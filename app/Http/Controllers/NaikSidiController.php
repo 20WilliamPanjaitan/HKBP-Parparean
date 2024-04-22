@@ -8,6 +8,11 @@ class NaikSidiController extends Controller
 {
     public function index()
     {
-        return view('naik_sidi');
+        return view(
+            'naik_sidi',
+            [
+                "title" => "layanan"
+            ]
+        );
     }
 }

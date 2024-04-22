@@ -6,7 +6,13 @@ use Illuminate\Http\Request;
 
 class PraNikahController extends Controller
 {
-    public function index(){
-        return view('pranikah');
+    public function index()
+    {
+        return view(
+            'pranikah',
+            [
+                "title" => "layanan"
+            ]
+        );
     }
 }

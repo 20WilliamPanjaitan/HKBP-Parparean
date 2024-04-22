@@ -8,6 +8,11 @@ class PernikahanController extends Controller
 {
     public function index()
     {
-        return view('pernikahan');
+        return view(
+            'pernikahan',
+            [
+                "title" => "layanan"
+            ]
+        );
     }
 }
