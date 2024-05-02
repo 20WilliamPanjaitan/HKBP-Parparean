@@ -32,47 +32,72 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// routes/web.php
+
+Route::get('admin/tambah', function () {
+    return view('admin/tambah');
+});
 
 
 Route::get('/', [BerandaController::class, 'index']);
 Route::get('/beranda', [BerandaController::class, 'index']);
+Route::get('admin/index', [BerandaController::class, 'index_admin']);
+
+
+
 
 Route::get('/acara', [AcaraController::class, 'index']);
+Route::get('admin/acara', [AcaraController::class, 'index_admin']);
+Route::get('admin/tambah_acara', [AcaraController::class, 'create']);
+Route::post('admin/tambah_acara', [AcaraController::class, 'store']);
+Route::get('admin/{id}/edit_acara', [AcaraController::class, 'edit_acara']);
+
+
+
+
+
 Route::get('/babtis', [BabtisController::class, 'index']);
+Route::get('admin/babtis', [BabtisController::class, 'index_admin']);
+
+
 Route::get('/berita', [BeritaController::class, 'index']);
+Route::get('/admin/berita', [BeritaController::class, 'admin_index']);
+
+
+
 Route::get('/galeri', [GaleriController::class, 'index']);
+Route::get('admin/galeri', [GaleriController::class, 'index_admin']);
+
+
 Route::get('/jadwal_ibadah', [JadwalIbadahController::class, 'index']);
 Route::get('/jemaat_baru', [JemaatBaruController::class, 'index']);
+Route::get('admin/jemaat_baru', [JemaatBaruController::class, 'index_admin']);
+
 Route::get('/jemaat_pindah', [JemaatPindahController::class, 'index']);
+Route::get('admin/jemaat_pindah', [JemaatPindahController::class, 'index_admin']);
+
+
 Route::get('/kegiatan', [KegiatanController::class, 'index']);
+Route::get('admin/kegiatan', [KegiatanController::class, 'index_admin']);
+
+
 Route::get('/layanan', [LayananController::class, 'index']);
 Route::get('/naik_sidi', [NaikSidiController::class, 'index']);
+Route::get('admin/naik_sidi', [NaikSidiController::class, 'index_admin']);
+
+
 Route::get('/pengumuman', [PengumumanController::class, 'index']);
+Route::get('admin/pengumuman', [PengumumanController::class, 'index_admin']);
+
 Route::get('/pernikahan', [PernikahanController::class, 'index']);
+Route::get('admin/pernikahan', [PernikahanController::class, 'index_admin']);
+
 Route::get('/pranikah', [PraNikahController::class, 'index']);
+Route::get('admin/pranikah', [PraNikahController::class, 'index_admin']);
+
 Route::get('/tentang', [TentangController::class, 'index']);
 Route::get('/tingting', [TingtingController::class, 'index']);
 
 Route::get('/diakonia', [DiakoniaController::class, 'index']);
 Route::get('/marturia', [MarturiaControler::class, 'index']);
 Route::get('/koinonia', [KoinoniaController::class, 'index']);
-
-Route::get('/dewan_koinonia', [KoinoniaController::class, 'dewan_koinonia']);
-Route::get('/sekolah_minggu', [KoinoniaController::class, 'sekolah_minggu']);
-Route::get('/remaja', [KoinoniaController::class, 'remaja']);
-Route::get('/naposo', [KoinoniaController::class, 'naposo']);
-Route::get('/parompuan', [KoinoniaController::class, 'parompuan']);
-Route::get('/ama', [KoinoniaController::class, 'ama']);
-Route::get('/lansia', [KoinoniaController::class, 'lansia']);
-
-Route::get('/dewan_marturia', [MarturiaControler::class, 'dewan_marturia']);
-Route::get('/sending', [MarturiaControler::class, 'sending']);
-Route::get('/tim_doa', [MarturiaControler::class, 'tim_doa']);
-Route::get('/musik', [MarturiaControler::class, 'multi_media']);
-Route::get('/multi_media', [MarturiaControler::class, 'multi_media']);
-
-Route::get('/dewan_diakonia', [DiakoniaController::class, 'dewan_diakonia']);
-Route::get('/sosial', [DiakoniaController::class, 'sosial']);
-Route::get('/pendidikan', [DiakoniaController::class, 'pendidikan']);
-Route::get('/kesehatan', [DiakoniaController::class, 'kesehatan']);
-Route::get('/kemasyarakatan', [DiakoniaController::class, 'kemasyarakatan']);

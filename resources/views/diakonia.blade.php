@@ -2,7 +2,11 @@
 @section('header')
 
 <main>
-    <H1>Diakonia</H1>
-</main>
+    <section>
+        <div class="container section-title" data-aos="fade-up">
+            <h2>dewan</h2>
+            <p class="">DEWAN DIAKONIA</p>
+        </div>
+    </section></main>
 
 @endsection

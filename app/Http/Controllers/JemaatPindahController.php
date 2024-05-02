@@ -15,4 +15,14 @@ class JemaatPindahController extends Controller
             ]
         );
     }
+
+    public function index_admin()
+    {
+        return view(
+            'admin/jemaat_pindah',
+            [
+                "title" => "layanan"
+            ]
+        );
+    }
 }

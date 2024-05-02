@@ -63,55 +63,20 @@
 
             <div class="container">
                 <div class="row">
+                    @foreach ($berita as $beritas)
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                         <div class="course-item">
-                            <img src="assets/img/kegiatan1.jpg" class="img-fluid" alt="...">
+                            <img src="assets/img/{{$beritas->foto}}" class="img-fluid" alt="...">
                             <div class="course-content">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <button class="btn btn-primary">Selengkapnya</button>
                                 </div>
-                                <h3><a href="course-details.html">Kegiatan Latihan Koor</a></h3>
-                                <p class="description">Kegiatan ini dilaksanakan setiap hari Sabtu pukul 20.00 Wib
-                                    bertempat di ruangan
-                                    konsistori yang dilatih oleh Parker Sianipar.</p>
-
+                                <h3>{{$beritas->judul}}</h3>
+                                <p class="description">{{$beritas->keterangan}}</p>
                             </div>
                         </div>
                     </div> <!-- End Course Item-->
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
-                        data-aos-delay="200">
-                        <div class="course-item">
-                            <img src="assets/img/kegiatan2.jpg" class="img-fluid" alt="...">
-                            <div class="course-content">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <button class="btn btn-primary">Selengkapnya</button>
-                                </div>
-                                <h3><a href="course-details.html">Jubelium 150 Tahun HKBP</a></h3>
-                                <p class="description">Bupati juga kami mengajak seluruh parhalado dan jemaat HKBP
-                                    Ressort Eben Ezer
-                                    Parparean, untuk turut serta mendukung visi dan misi Kabupaten Toba Samosir</p>
-
-                            </div>
-                        </div>
-                    </div> <!-- End Course Item-->
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
-                        data-aos-delay="300">
-                        <div class="course-item">
-                            <img src="assets/img/kegiatan3.jpg" class="img-fluid" alt="...">
-                            <div class="course-content">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <button class="btn btn-primary">Selengkapnya</button>
-                                </div>
-
-                                <h3><a href="course-details.html">Renovasi Gereja</a></h3>
-                                <p class="description">Dinding dan Pagar HKBP Parparean IV 'Disulap' Cantik oleh TPL dan
-                                    Warga
-                                </p>
-                            </div>
-                        </div>
-                    </div> <!-- End Course Item-->
+                    @endforeach
                 </div>
             </div>
         </section><!-- /Courses Section -->
@@ -128,16 +93,17 @@
                 <div class="row gy-4">
                     <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="why-box">
-                            <h3>Ayat Bacaan</h3>
+                            @foreach ($renungan as $renungann)
+                            <h3>{{$renungann->judul}}</h3>
                             <p>
-                                Tetapi carilah dahulu Kerajaan Allah dan kebenarannya,
-                                <br>maka semuanya itu akan ditambahkan kepadamu.
+                                {{$renungann->isi_renungan}}
                             </p>
-                            <p>Matius 6:33</p>
+                            <p>{{$renungann->ayat_renungan}}</p>
                             <div class="text-center">
                                 <a href="#" class="more-btn"><span>Learn More</span> <i
                                         class="bi bi-chevron-right"></i></a>
                             </div>
+                            @endforeach
                         </div>
                     </div><!-- End Why Box -->
 
@@ -146,8 +112,8 @@
 
                             <div class="col-xl-4">
                                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                                    <div class="row"><iframe width="560"
-                                            src="https://www.youtube.com/embed/qhJkJHNQRuI?si=Zv9Bkb66KJ_CxBJH"
+                                    <div class="row"><iframe width="560" 
+                                            src="https://www.youtube.com/embed/htSruA19Fbc?si=v4gTjAZ6TtU2Gw5U"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -160,7 +126,7 @@
                             <div class="col-xl-4">
                                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                                     <div class="row"><iframe width="560"
-                                            src="https://www.youtube.com/embed/qhJkJHNQRuI?si=Zv9Bkb66KJ_CxBJH"
+                                            src="https://www.youtube.com/embed/htSruA19Fbc?si=v4gTjAZ6TtU2Gw5U"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -193,7 +159,7 @@
 
         <div class="container section-title" data-aos="fade-up">
             <h2>Warta</h2>
-            <p class="">Warta Jemaat</p>
+            <p class="">Tata Ibadah</p>
         </div>
         <div class="page-body">
             <div class="container-xl">
@@ -212,76 +178,23 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($ibadah as $ibadahs)
                                         <tr>
-                                            <td>Maryjo Lebarree</td>
+                                            <td>{{$ibadahs->nama_ibadah}}</td>
                                             <td class="text-muted">
-                                                Civil Engineer, Product Management
+                                                Kebangkitan Tuhan Yesus Kristus
                                             </td>
-                                            <td class="text-muted"><a href="#" class="text-reset">Minggu, 14 April
-                                                    2024</a></td>
                                             <td class="text-muted">
-                                                User
+                                                {{$ibadahs->tanggal_ibadah}}
+                                            </td>
+                                            <td class="text-muted">
+                                                Ibadah Minggu
                                             </td>
                                             <td>
                                                 <a href="#">Unduh</a>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>Egan Poetz</td>
-                                            <td class="text-muted">
-                                                Research Nurse, Engineering
-                                            </td>
-                                            <td class="text-muted"><a href="#" class="text-reset">epoetz6@free.fr</a>
-                                            </td>
-                                            <td class="text-muted">
-                                                Admin
-                                            </td>
-                                            <td>
-                                                <a href="#">Unduh</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Kellie Skingley</td>
-                                            <td class="text-muted">
-                                                Teacher, Services
-                                            </td>
-                                            <td class="text-muted"><a href="#"
-                                                    class="text-reset">kskingley7@columbia.edu</a></td>
-                                            <td class="text-muted">
-                                                User
-                                            </td>
-                                            <td>
-                                                <a href="#">Unduh</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Christabel Charlwood</td>
-                                            <td class="text-muted">
-                                                Tax Accountant, Engineering
-                                            </td>
-                                            <td class="text-muted"><a href="#"
-                                                    class="text-reset">ccharlwood8@nifty.com</a></td>
-                                            <td class="text-muted">
-                                                Owner
-                                            </td>
-                                            <td>
-                                                <a href="#">Unduh</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Haskel Shelper</td>
-                                            <td class="text-muted">
-                                                Staff Scientist, Legal
-                                            </td>
-                                            <td class="text-muted"><a href="#"
-                                                    class="text-reset">hshelper9@woothemes.com</a></td>
-                                            <td class="text-muted">
-                                                Admin
-                                            </td>
-                                            <td>
-                                                <a href="#">Unduh</a>
-                                            </td>
-                                        </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -303,10 +216,37 @@
 
                     <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                         <div class="member">
-                            <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+                            @foreach ($pendeta as $pendetas)
+                            <img src="assets/img/{{$pendetas->foto}}" class="img-fluid" alt="">
                             <div class="member-content">
-                                <h4>Walter White</h4>
-                                <span>Web Development</span>
+
+                                <h4>{{$pendetas->nama}}</h4>
+                                <span>{{$pendetas->jabatan}}</span>
+                                <p>
+                                    Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis
+                                    quaerat qui aut
+                                    aut aut
+                                </p>
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+
+                            </div>
+                            @endforeach
+                        </div>
+                    </div><!-- End Team Member -->
+
+                    <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <div class="member">
+                            @foreach ($bibel as $bibels)
+                            <img src="assets/img/{{$bibels->foto}}" class="img-fluid" alt="">
+                            <div class="member-content">
+
+                                <h4>{{$bibels->nama}}</h4>
+                                <span>{{$bibels->jabatan}}</span>
                                 <p>
                                     Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis
                                     quaerat qui aut
@@ -319,39 +259,21 @@
                                     <a href=""><i class="bi bi-linkedin"></i></a>
                                 </div>
                             </div>
-                        </div>
-                    </div><!-- End Team Member -->
-
-                    <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member">
-                            <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
-                            <div class="member-content">
-                                <h4>Sarah Jhinson</h4>
-                                <span>Marketing</span>
-                                <p>
-                                    Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto
-                                    rerum rerum
-                                    temporibus
-                                </p>
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div><!-- End Team Member -->
 
                     <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
                         <div class="member">
-                            <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
+                            @foreach ($guru as $gurus)
+                            <img src="assets/img/{{$gurus->foto}}" class="img-fluid" alt="">
                             <div class="member-content">
-                                <h4>William Anderson</h4>
-                                <span>Content</span>
+                                <h4>{{$gurus->nama}}</h4>
+                                <span>{{$gurus->jabatan}}</span>
                                 <p>
-                                    Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et
-                                    laborum toro des clara
+                                    Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis
+                                    quaerat qui aut
+                                    aut aut
                                 </p>
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
@@ -360,9 +282,9 @@
                                     <a href=""><i class="bi bi-linkedin"></i></a>
                                 </div>
                             </div>
+                            @endforeach
                         </div>
                     </div><!-- End Team Member -->
-
                 </div>
 
             </div>

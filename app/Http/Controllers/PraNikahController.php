@@ -15,4 +15,14 @@ class PraNikahController extends Controller
             ]
         );
     }
+
+    public function index_admin()
+    {
+        return view(
+            'admin/pranikah',
+            [
+                "title" => "layanan"
+            ]
+        );
+    }
 }

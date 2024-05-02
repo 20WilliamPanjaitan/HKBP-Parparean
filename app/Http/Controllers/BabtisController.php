@@ -15,4 +15,14 @@ class BabtisController extends Controller
             ]
         );
     }
+
+    public function index_admin()
+    {
+        return view(
+            'admin/babtis',
+            [
+                "title" => "layanan"
+            ]
+        );
+    }
 }

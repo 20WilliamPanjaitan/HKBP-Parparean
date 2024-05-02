@@ -15,4 +15,16 @@ class BeritaController extends Controller
             ]
         );
     }
+
+    public function index_berita()
+    {
+        return view(
+            'admin/berita',
+            [
+                "title" => "berita"
+            ]
+        );
+    }
+
+
 }

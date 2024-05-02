@@ -103,7 +103,7 @@
                                     </div>
                                 </div><!-- End testimonial item -->
                                 <div class="card" style="width: 18rem;">
-                                    <img src="assets/img/tardidi.jpg" class="card-img-top" alt="tardidi">
+                                    <img src="assets/img/babtis.jpeg" class="card-img-top" alt="tardidi">
                                     <div class="card-body">
                                         <h5 class="card-title">Tardidi</h5>
                                         <p class="card-text">Some quick example text to build on the card title and make

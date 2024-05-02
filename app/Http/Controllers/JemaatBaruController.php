@@ -15,4 +15,14 @@ class JemaatBaruController extends Controller
             ]
         );
     }
+
+    public function index_admin()
+    {
+        return view(
+            'admin/jemaat_baru',
+            [
+                "title" => "layanan"
+            ]
+        );
+    }
 }

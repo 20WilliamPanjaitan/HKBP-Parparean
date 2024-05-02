@@ -15,4 +15,14 @@ class NaikSidiController extends Controller
             ]
         );
     }
+
+    public function index_admin()
+    {
+        return view(
+            'admin/naik_sidi',
+            [
+                "title" => "layanan"
+            ]
+        );
+    }
 }

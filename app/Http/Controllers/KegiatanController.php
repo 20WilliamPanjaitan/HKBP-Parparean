@@ -15,4 +15,14 @@ class KegiatanController extends Controller
             ]
         );
     }
+
+    public function index_admin()
+    {
+        return view(
+            'admin/kegiatan',
+            [
+                "title" => "berita"
+            ]
+        );
+    }
 }

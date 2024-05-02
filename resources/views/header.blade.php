@@ -52,7 +52,7 @@
                 <ul>
                     <li><a href="/beranda" class="{{($title === "beranda")? 'active' : ''}}">Beranda</a></li>
                     <li class="dropdown has-dropdown"><a href="/layanan"
-                        class="{{($title === "layanan")? 'active' : ''}}"><span>Layanan</span> <i
+                            class="{{($title === "layanan")? 'active' : ''}}"><span>Layanan</span> <i
                                 class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="/pranikah">Pranikah</a></li>
@@ -85,39 +85,13 @@
                         </ul>
                     </li>
                     <li class="dropdown has-dropdown"><a href="/koinonia"
-                            class="{{($title === "koinonia")? 'active' : ''}}"><span>Koinonia</span> <i
-                                class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="/dewan_koinonia">Dewan Koinonia</a></li>
-                            <li><a href="/sekolah_minggu">Sekolah Minggu</a></li>
-                            <li><a href="/remaja">Remaja</a></li>
-                            <li><a href="/naposo">Naposo</a></li>
-                            <li><a href="/parompuan">Parompuan</a></li>
-                            <li><a href="/ama">Ama</a></li>
-                            <li><a href="/lansia">Lansia </a></li>
-                        </ul>
+                            class="{{($title === "koinonia")? 'active' : ''}}"><span>Koinonia</span></a>
                     </li>
                     <li class="dropdown has-dropdown"><a href="/marturia"
-                            class="{{($title === "marturia")? 'active' : ''}}"><span>Marturia</span> <i
-                                class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="/dewan_marturia">Dewan Marturia</a></li>
-                            <li><a href="/sending">Sending</a></li>
-                            <li><a href="/tim_doa">Tim Doa</a></li>
-                            <li><a href="/musik">Musik</a></li>
-                            <li><a href="/multi_media">Multi Media</a></li>
-                        </ul>
+                            class="{{($title === "marturia")? 'active' : ''}}"><span>Marturia</span></a>
                     </li>
                     <li class="dropdown has-dropdown"><a href="/diakonia"
-                            class="{{($title === "diakonia")? 'active' : ''}}"><span>Diakonia</span> <i
-                                class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="/dewan_diakonia">Dewan Diakonia</a></li>
-                            <li><a href="/sosial">Sosial</a></li>
-                            <li><a href="/pendidikan">Pendidikan</a></li>
-                            <li><a href="/kesehatan">Kesehatan</a></li>
-                            <li><a href="/kemasyarakatan">Kemasyarakatan </a></li>
-                        </ul>
+                            class="{{($title === "diakonia")? 'active' : ''}}"><span>Diakonia</span></a>
                     </li>
                     <li><a class="{{($title === "galeri")? 'active' : ''}}" href="/galeri">Galeri</a></li>
 
@@ -125,7 +99,7 @@
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted" href="courses.html">Login</a>
+            <a class="btn-getstarted" href="/login">Login</a>
 
         </div>
     </header>
@@ -137,70 +111,58 @@
         <div class="container footer-top">
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
-                    <a href="index.html" class="logo d-flex align-items-center">
-                        <span class="">Mentor</span>
+                    <img src="assets/img/download.png" alt="" style="float:left; width: 50px; height: auto;">
+                    <a href="index.html" class="logo d-flex align-items-center"
+                        style="text-decoration: none; margin-left: 10px;">
+                        <span style="margin-left: 5px;">HKBP PARPAREAN</span>
                     </a>
-                    <div class="footer-contact pt-3">
-                        <p>A108 Adam Street</p>
-                        <p>New York, NY 535022</p>
-                        <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-                        <p><strong>Email:</strong> <span>info@example.com</span></p>
+
+                    <div class="footer-contact pt-4">
+                        <p>Jl. Raja Sipakko, Parparean I</p>
+                        <p>Porsea, Sumatera Utara, Indonesia</p>
                     </div>
                     <div class="social-links d-flex mt-4">
-                        <a href=""><i class="bi bi-twitter"></i></a>
+                        <a href=""><i class="bi bi-youtube"></i></a>
                         <a href=""><i class="bi bi-facebook"></i></a>
                         <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-3 footer-links">
                     <h4>Useful Links</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Terms of service</a></li>
-                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="/beranda">Beranda</a></li>
+                        <li><a href="/layanan">Layanan</a></li>
+                        <li><a href="/berita">Berita</a></li>
+                        <li><a href="/tentang">Tentang</a></li>
+                        <li><a href="/galeri">Galeri</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Our Services</h4>
+                    <h4>Contact</h4>
                     <ul>
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Product Management</a></li>
-                        <li><a href="#">Marketing</a></li>
-                        <li><a href="#">Graphic Design</a></li>
+                        <p>St.Lenny Manurung</p>
+                        <p>+62 821-6776-3400</p>
+                        <p>Gr.Hekson Simbolon</p>
+                        <p>+62 852-6194-5886</p>
                     </ul>
                 </div>
 
                 <div class="col-lg-4 col-md-12 footer-newsletter">
-                    <h4>Our Newsletter</h4>
-                    <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-                    <form action="forms/newsletter.php" method="post" class="php-email-form">
-                        <div class="newsletter-form"><input type="email" name="email"><input type="submit"
-                                value="Subscribe"></div>
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-                    </form>
+                    <h4>About Us</h4>
+                    <p>HKBP Parparean adalah Gereja HKBP yang berada di Parparean, Porsea, Toba Samosir, dan bernaung di
+                        bawah HKBP Distrik IV Toba.</p>
+
                 </div>
-
             </div>
-        </div>
 
-        <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1">SiteName</strong> <span>All Rights Reserved</span></p>
-            <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you've purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            <div class="container copyright text-center mt-4">
+                <p>© <span>Copyright</span> <strong class="px-1">HKBP PARPAREAN</strong> <span>All Rights
+                        Reserved</span></p>
+                <div class="credits">
+                </div>
             </div>
-        </div>
 
     </footer>
 
