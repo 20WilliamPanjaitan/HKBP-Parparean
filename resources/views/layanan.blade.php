@@ -37,11 +37,11 @@
                         <div class="course-item">
                             <img src="assets/img/pernikahan.jpeg" class="img-fluid" alt="..." />
                             <div class="course-content">
-                                <h3><a href="course-details.html">Pernikahan</a></h3>
+                                <h3><a href="pernikahan">Pernikahan</a></h3>
                                 <p class="description">Et architecto provident deleniti facere repellat nobis iste. Id
                                     facere quia quae
                                     dolores dolorem tempore.</p>
-                                <a href="pernikahan.html" class="btn btn-primary">Daftar</a>
+                                <a href="pernikahan" class="btn btn-primary">Daftar</a>
                                 <div class="trainer d-flex justify-content-between align-items-center">
                                 </div>
                             </div>
@@ -55,11 +55,11 @@
                         <div class="course-item">
                             <img src="assets/img/sidi.jpg" class="img-fluid" alt="..." />
                             <div class="course-content">
-                                <h3><a href="course-details.html">Naik Sidi</a></h3>
+                                <h3><a href="naik_sidi">Naik Sidi</a></h3>
                                 <p class="description">Et architecto provident deleniti facere repellat nobis iste. Id
                                     facere quia quae
                                     dolores dolorem tempore.</p>
-                                <a href="naiksidi.html" class="btn btn-primary">Daftar</a>
+                                <a href="naik_sidi" class="btn btn-primary">Daftar</a>
                                 <div class="trainer d-flex justify-content-between align-items-center">
                                 </div>
                             </div>
@@ -109,11 +109,11 @@
                         <div class="course-item">
                             <img src="assets/img/jemaat_pindah.jpeg" class="img-fluid" alt="..." />
                             <div class="course-content">
-                                <h3><a href="course-details.html">Permohonan Pindah</a></h3>
+                                <h3><a href="jemaat_pindah">Permohonan Pindah</a></h3>
                                 <p class="description">Et architecto provident deleniti facere repellat nobis iste. Id
                                     facere quia quae
                                     dolores dolorem tempore.</p>
-                                <a href="jemaatpindah.html" class="btn btn-primary">Daftar</a>
+                                <a href="jemaat_pindah" class="btn btn-primary">Daftar</a>
                                 <div class="trainer d-flex justify-content-between align-items-center">
                                 </div>
                             </div>

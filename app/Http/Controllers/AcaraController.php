@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Acara;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class AcaraController extends Controller
 {
@@ -55,8 +56,14 @@ class AcaraController extends Controller
     }
 
 
-    public function edit_acara($id)
+    public function edit_acara(Acara $acara)
     {
-        return view('admin/edit_acara');
+        return view('admin.tambah_acara', compact('acara'));
+    }
+
+    public function delete_acara(Acara $acara)
+    {
+        $acara->delete();
+        return Redirect::route('admin_acara');
     }
 }

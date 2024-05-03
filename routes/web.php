@@ -47,10 +47,13 @@ Route::get('admin/index', [BerandaController::class, 'index_admin']);
 
 
 Route::get('/acara', [AcaraController::class, 'index']);
-Route::get('admin/acara', [AcaraController::class, 'index_admin']);
+Route::get('admin/acara', [AcaraController::class, 'index_admin'])->name('admin_acara');;
 Route::get('admin/tambah_acara', [AcaraController::class, 'create']);
 Route::post('admin/tambah_acara', [AcaraController::class, 'store']);
-Route::get('admin/{id}/edit_acara', [AcaraController::class, 'edit_acara']);
+// Route::get('admin/{id}/edit_acara', [AcaraController::class, 'edit_acara']);
+Route::get('admin/edit_acara/{acara}', [AcaraController::class, 'edit_acara'])->name('edit_acara');
+// Route::get('admin/edit_acara', [AcaraController::class, 'edit_acara']);
+Route::delete('admin/hapus/{acara}', [AcaraController::class, 'delete_acara'])->name('hapus_acara');
 
 
 

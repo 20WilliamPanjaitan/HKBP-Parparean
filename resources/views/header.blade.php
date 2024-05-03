@@ -70,7 +70,6 @@
                         <ul>
                             <li><a href="/pengumuman">Pengumuman</a></li>
                             <li><a href="/jadwal_ibadah">Jadwal Ibadah</a></li>
-                            <li><a href="/tingting">Tingting</a></li>
                             <li><a href="/acara">Acara</a></li>
                             <li><a href="/kegiatan">Kegiatan</a></li>
                         </ul>
