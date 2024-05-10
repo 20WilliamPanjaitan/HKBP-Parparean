@@ -3,23 +3,6 @@
 
 
 <main>
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-2 text-dark mb-4 animated slideInDown">About Us</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-dark" aria-current="page">About</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
-
-
-    <!-- About Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
@@ -42,34 +25,32 @@
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <div class="section-title">
                         <p class="fs-5 fw-medium fst-italic text-primary">Sejarah </p>
-                        <h1 class="display-6">Gereja HKBP Parparean</h1>
+                        <h3 class="fw-bold mb-5">Gereja HKBP Parparean</h3>
                     </div>
                     <div class="row g-3 mb-4">
                         <div class="col-sm-4">
                             <img class="img-fluid bg-white w-100" src="img/about-5.jpg" alt="">
                         </div>
                         <div class="col-sm-8">
-                            <h5>Sed ut augue vitae eros aliquam facilisis. Nam auctor, nisi in sodales scelerisque,
-                                ipsum odio
-                                faucibus justo, eget consectetur ligula dolor at ante. Nullam sagittis metus ut magna
-                                lacinia, in
-                                posuere quam lacinia. </h5>
-                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
-                                diam et
-                                eos. Clita erat ipsum et lorem et sit</p>
+                            <p>Gereja HKBP Parparean memiliki sejarah yang kaya dan berakar dalam perjalanan panjang
+                                iman dan pengabdian. Berdiri di tengah-tengah masyarakat Batak, gereja ini telah menjadi
+                                landasan keagamaan bagi banyak generasi. Sejarahnya yang dimulai dari zaman penjajahan
+                                Belanda hingga era modern menandai perjalanan gereja ini dalam melayani dan memperkuat
+                                iman jemaatnya. Dengan tekad yang kokoh dan semangat pelayanan yang tulus, Gereja HKBP
+                                Parparean terus menerus berkembang sebagai pusat rohani dan tempat pertemuan yang
+                                mempersatukan umat dalam kepercayaan dan pengharapan. </p>
                         </div>
                     </div>
                     <div class="border-top mb-4"></div>
                     <div class="row g-3">
                         <div class="col-sm-8">
-                            <h5>Sed ut augue vitae eros aliquam facilisis. Nam auctor, nisi in sodales scelerisque,
-                                ipsum odio
-                                faucibus justo, eget consectetur ligula dolor at ante. Nullam sagittis metus ut magna
-                                lacinia, in
-                                posuere quam lacinia. </h5>
-                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
-                                diam et
-                                eos. Clita erat ipsum et lorem et sit</p>
+                            <p class="mb-0">"Dalam perjalanan panjang kami sebagai komunitas iman, kami telah diberkati
+                                dengan warisan yang kaya akan pengabdian, pengorbanan, dan keberanian dari
+                                generasi-generasi sebelum kami. Sejarah gereja kami adalah bukti cinta Allah yang terus
+                                mengalir melalui zaman, menginspirasi kami untuk meneruskan misi-Nya dengan penuh
+                                semangat dan keberanian. Mari kita bersama-sama merenungkan warisan ini dengan rendah
+                                hati, mengambil inspirasi dari mereka yang telah berjalan di jalan iman sebelum kita,
+                                sambil menjaga api iman kami tetap menyala dalam setiap langkah yang kami ambil."</p>
                         </div>
                         <div class="col-sm-4">
                             <img class="img-fluid bg-white w-100" src="img/about-6.jpg" alt="">
@@ -80,74 +61,51 @@
         </div>
     </div>
     <!-- About End -->
-
-    <!-- Visi Misi Startt -->
-    <div class="container-fluid video my-5">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-6 py-5 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="py-5">
-                        <h1 class="display-6 mb-4">Visi Misi <span class="text-white">Gejera</span> HKBP <span
-                                class="text-white">Parparean</span></h1>
-                        <h5 class="fw-normal lh-base fst-italic text-white mb-5">Tempor erat elitr rebum at clita. Diam
-                            dolor diam
-                            ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit</h5>
-                        <div class="row g-4 mb-5">
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3">
-                                        <i class="fa fa-check"></i>
-                                    </div>
-                                    <span class="text-dark">Praesent non mauris et velit hendrerit sodales. Integer
-                                        tempus lacus et nunc
-                                        lacinia, sed rutrum elit sollicitudin</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3">
-                                        <i class="fa fa-check"></i>
-                                    </div>
-                                    <span class="text-dark">Donec tincidunt, enim sed gravida scelerisque, sapien justo
-                                        dignissim lacus,
-                                        sit amet gravida enim odio sed orci</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3">
-                                        <i class="fa fa-check"></i>
-                                    </div>
-                                    <span class="text-dark">Pellentesque habitant morbi tristique senectus et netus et
-                                        malesuada fames
-                                        ac turpis egestas.</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3">
-                                        <i class="fa fa-check"></i>
-                                    </div>
-                                    <span class="text-dark">Maecenas commodo lorem vel neque ultricies, nec varius lacus
-                                        vehicula. Sed
-                                        aliquam interdum nulla id laoreet</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!--Visi Misi Start-->
+    <div class="container-fluid my-5 d-flex justify-content-center align-items-center"
+        style="background-color: #83aaed;">
+        <div class="py-5 text-center">
+            <h3 class="fw-bold text-center mb-5"> Visi Misi Gereja HKBP Parparean</h3>
+            <div class="row justify-content-around">
+                <div class="col-6" data-aos="fade-right">
+                    <h3 style="text-align: center;">Visi</h3>
+                    <hr style="border-top: 2px solid black; width: 50%; margin: auto;">
+                    <ul class="list-unstyled" style="text-align: left;">
+                        <li><i class="fas fa-circle"></i> Menjadi gereja yang melayani dengan kasih dan rendah hati</li>
+                        <li><i class="fas fa-circle"></i> Memperlengkapi setiap anggota jemaat untuk melayani sesama
+                        </li>
+                        <li><i class="fas fa-circle"></i> Menjadi tempat berkumpulnya umat yang penuh dengan sukacita
+                        </li>
+                        <li><i class="fas fa-circle"></i> Memperluas pengaruh injil di wilayah sekitar</li>
+                        <li><i class="fas fa-circle"></i> Menghasilkan murid-murid Kristus yang matang dalam iman</li>
+                    </ul>
                 </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 300px;">
-                        <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                            <span></span>
-                        </button>
-                    </div>
+                <div class="col-6" data-aos="fade-left">
+                    <h3 style="text-align: center;">Misi</h3>
+                    <hr style="border-top: 2px solid black; width: 50%; margin: auto;">
+                    <ul class="list-unstyled" style="text-align: left;">
+                        <li><i class="fas fa-circle"></i> Membangun hubungan yang kuat dengan Tuhan melalui doa dan
+                            firman</li>
+                        <li><i class="fas fa-circle"></i> Membantu mereka yang membutuhkan di dalam dan di luar gereja
+                        </li>
+                        <li><i class="fas fa-circle"></i> Menjangkau masyarakat sekitar dengan program sosial</li>
+                        <li><i class="fas fa-circle"></i> Mendukung pembangunan gereja untuk pertumbuhan rohani</li>
+                        <li><i class="fas fa-circle"></i> Membimbing anggota jemaat untuk hidup sesuai dengan ajaran
+                            Yesus</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Visi Misi End -->
+
+    <!--Visi Misi end-->
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+    </script>
+
 
     <section id="trainers-index" class="section trainers-index">
         <div class="container">
@@ -156,17 +114,8 @@
                     <div class="member">
                         <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="" />
                         <div class="member-content">
-                            <h4>Walter White</h4>
-                            <span>Web Development</span>
-                            <p>Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis
-                                quaerat qui aut
-                                aut aut</p>
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
+                            <h4>Pdt. Anggiat Simanjuntak S.Th</h4>
+                            <span>Pendeta Gereja HKBP Parparean</span>
                         </div>
                     </div>
                 </div>
@@ -176,17 +125,8 @@
                     <div class="member">
                         <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="" />
                         <div class="member-content">
-                            <h4>Sarah Jhinson</h4>
-                            <span>Marketing</span>
-                            <p>Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum
-                                rerum
-                                temporibus</p>
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
+                            <h4>Biv. Lastriana Lumban Gaol</h4>
+                            <span>Bibelvrow HKBP Parparean</span>
                         </div>
                     </div>
                 </div>
@@ -196,17 +136,8 @@
                     <div class="member">
                         <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="" />
                         <div class="member-content">
-                            <h4>William Anderson</h4>
-                            <span>Content</span>
-                            <p>Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum
-                                toro des clara
-                            </p>
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
+                            <h4>Gr. Hekson Simbolon</h4>
+                            <span>Guru Huria HKBP Parparean</span>
                         </div>
                     </div>
                 </div>
@@ -214,5 +145,7 @@
 
                 <!-- /Tentang Section -->
 </main>
+
+
 
 @endsection

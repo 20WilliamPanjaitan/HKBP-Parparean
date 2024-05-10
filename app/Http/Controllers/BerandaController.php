@@ -18,7 +18,7 @@ class BerandaController extends Controller
         $pendeta = Parhalado::where('jabatan', 'Pendeta')->get();
         $bibel = Parhalado::where('jabatan', 'Bibelvrow')->get();
         $guru = Parhalado::where('jabatan', 'Guru Huria')->get();
-        $berita = Berita::get();
+        $berita = Berita::take(3)->get();
 
         return view('beranda', [
             'renungan' => $renungan,
@@ -48,5 +48,14 @@ class BerandaController extends Controller
                 "title" => "index"
             ]
         );
+    }
+
+
+
+    function view_pdf()
+    {
+        $mpdf = new \Mpdf\Mpdf();
+        $mpdf->WriteHTML('<h1>Hello world!</h1>');
+        $mpdf->Output();
     }
 }

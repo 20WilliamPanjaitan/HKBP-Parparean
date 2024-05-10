@@ -70,18 +70,11 @@
                         <ul>
                             <li><a href="/pengumuman">Pengumuman</a></li>
                             <li><a href="/jadwal_ibadah">Jadwal Ibadah</a></li>
-                            <li><a href="/acara">Acara</a></li>
-                            <li><a href="/kegiatan">Kegiatan</a></li>
+                            <li><a href="/acara">Acara & Kegiatan</a></li>
                         </ul>
                     </li>
                     <li class="dropdown has-dropdown"><a href="/tentang"
-                            class="{{($title === "tentang")? 'active' : ''}}"><span>Tentang</span> <i
-                                class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Sejarah</a></li>
-                            <li><a href="#">Visi Misi</a></li>
-                            <li><a href="#">Parhalado</a></li>
-                        </ul>
+                            class="{{($title === "tentang")? 'active' : ''}}"><span>Tentang</span></a>
                     </li>
                     <li class="dropdown has-dropdown"><a href="/koinonia"
                             class="{{($title === "koinonia")? 'active' : ''}}"><span>Koinonia</span></a>
@@ -98,7 +91,7 @@
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted" href="/login">Login</a>
+            <a class="btn-getstarted" href="/home">Login</a>
 
         </div>
     </header>

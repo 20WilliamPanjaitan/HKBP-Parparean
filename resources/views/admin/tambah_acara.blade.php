@@ -1,6 +1,7 @@
 @extends('admin/side_bar')
 @section('side_bar')
 
+
                     <!-- Page Heading -->
                     <main>
                         <div class="container-fluid">
@@ -67,13 +68,13 @@
                                                     required>
                                             </div>
                                         </div>
-                                        {{-- <div class="form-group row">
-                                            <label for="gambar_acara" class="col-sm-2 col-form-label">Gambar</label>
+                                        <div class="form-group row">
+                                            <label for="foto" class="col-sm-2 col-form-label">Gambar</label>
                                             <div class="col-sm-10">
-                                                <input type="file" class="form-control" id="gambar_acara"
-                                                    name="gambar_acara">
+                                                <input type="file" class="form-control" id="foto"
+                                                    name="foto">
                                             </div>
-                                        </div> --}}
+                                        </div>
 
                                         <div class="form-group row ">
                                             <div class="col-sm-10">

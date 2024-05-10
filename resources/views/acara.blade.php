@@ -2,35 +2,43 @@
 @section('header')
 
 
-    <main class="main">
+<main class="main">
 
-        <!-- Page Title -->
-        <div class="page-title" data-aos="fade">
-            <nav class="breadcrumbs">
-                <div class="breadcrumbs">
-                    <ol class="breadcrumbs">
-                        <li class="breadcrumbs-item"><a href="index.html">Beranda</a></li>
-                        <li class="breadcrumbs-item"><a href="Berita.html">Berita</a></li>
-                        <li class="breadcrumbs-item active">Acara</li>
-                    </ol>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Acara</h2>
+            <p class="">ACARA & KEGIATAN</p>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <section id="events" class="events section">
+                <div class="container" data-aos="fade-up">
+                    <div class="row">
+                        @foreach ($acara as $acaras)
+                            
+                        <div class="col-md-6 d-flex align-items-stretch">
+                            <div class="card">
+                                <div class="card-img">
+                                <img src="images/{{$acaras->foto}}" alt="TelorPaskah" class="card-img-top">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{$acaras->nama_acara}}</h5>
+                                    <p class="fst-italic text-center">{{$acaras->lokasi_acara}}</p>
+                                    <p class="fst-italic text-center">{{$acaras->jenis_acara}}</p>
+                                    <p class="card-text">{{$acaras->keterangan}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
                 </div>
-            </nav>
-        </div><!-- End Page Title -->
+            </section>
+        </div>
+    </section><!-- /Testimonials Section -->
 
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="testimonials section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Acara</h2>
-                <p class="">ACARA TERKINI</p>
-            </div><!-- End Section Title -->
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-            </div>
-        </section><!-- /Testimonials Section -->
-
-    </main>
+</main>
 
 @endsection

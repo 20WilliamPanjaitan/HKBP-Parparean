@@ -37,49 +37,21 @@
 
                 </style>
                 <div class="swiper">
+
                     <div class="row row-cols-1 row-cols-md-2 g-4">
+                        @foreach ($pengumuman as $pengumumans)
+                            
                         <div class="col">
                             <div class="card">
-                                <img src="assets/img/Pranikah.jpg" class="card-img-top" alt="Pranikah">
+                                <img src="images/{{$pengumumans->foto}}" class="card-img-top" alt="Pranikah">
                                 <div class="card-body">
-                                    <h5 class="card-title">Pranikah</h5>
-                                    <p class="card-text">Jika jemaat ingin mendaftar pranikah silahkan mendaftar pada
-                                        fitur layanan.</p>
+                                    <h5 class="card-title">{{$pengumumans->judul}}</h5>
+                                    <p class="card-text">J{{$pengumumans->keterangan}}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="assets/img/pernikahan.jpeg" class="card-img-top" alt="pernikahan">
-                                <div class="card-body">
-                                    <h5 class="card-title">Pernikahan</h5>
-                                    <p class="card-text">Jika jemaat ingin mendaftar pernikahan silahkan mendaftar pada
-                                        fitur layanan.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="assets/img/tardidi.jpg" class="card-img-top" alt="tardidi">
-                                <div class="card-body">
-                                    <h5 class="card-title">Tardidi</h5>
-                                    <p class="card-text">Dibuka pendaftaran untuk tardidi, pendaftaran dibuka dari
-                                        tanggal 1 september
-                                        sampai 30 september.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="assets/img/Sidi.jpg" class="card-img-top" alt="Sidi">
-                                <div class="card-body">
-                                    <h5 class="card-title">Naik Sidi</h5>
-                                    <p class="card-text">Dibuka pendaftaran untuk tardidi, pendaftaran dibuka dari
-                                        tanggal 1 Desember
-                                        sampai 30 Desember.</p>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
+
                     </div>
                 </div><!-- End testimonial item -->
             </div>

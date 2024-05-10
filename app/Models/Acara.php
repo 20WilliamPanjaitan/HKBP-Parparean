@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Acara extends Model
 {
+    // use HasFactory;
+    // protected $guarded = [];
     protected $table = 'acara';
 }

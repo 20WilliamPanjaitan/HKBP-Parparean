@@ -1968,3 +1968,45 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+
+form {
+  position: top;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.form-outline {
+  width: 100%;
+}
+
+.form-check {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.text-center {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-link {
+  margin-top: 20px;
+}

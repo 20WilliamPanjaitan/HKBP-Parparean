@@ -66,7 +66,7 @@
                     @foreach ($berita as $beritas)
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                         <div class="course-item">
-                            <img src="assets/img/{{$beritas->foto}}" class="img-fluid" alt="...">
+                            <img src="images/{{$beritas->foto}}" class="img-fluid" alt="...">
                             <div class="course-content">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <button class="btn btn-primary">Selengkapnya</button>
@@ -99,10 +99,6 @@
                                 {{$renungann->isi_renungan}}
                             </p>
                             <p>{{$renungann->ayat_renungan}}</p>
-                            <div class="text-center">
-                                <a href="#" class="more-btn"><span>Learn More</span> <i
-                                        class="bi bi-chevron-right"></i></a>
-                            </div>
                             @endforeach
                         </div>
                     </div><!-- End Why Box -->
@@ -112,7 +108,7 @@
 
                             <div class="col-xl-4">
                                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                                    <div class="row"><iframe width="560" 
+                                    <div class="row"><iframe width="560"
                                             src="https://www.youtube.com/embed/htSruA19Fbc?si=v4gTjAZ6TtU2Gw5U"
                                             title="YouTube video player" frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
