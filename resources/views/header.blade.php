@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Beranda</title>
+    <title>@yield('title')</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -45,7 +45,7 @@
             <a href="index.html" class="logo d-flex align-items-center me-auto">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <img src="assets/img/logo-hkbp.png" alt="">
-                <h1 class="">HKBP Parparean</h1>
+                <h1 class="" style="font-size: 25px">HKBP Parparean</h1>
             </a>
 
             <nav id="navmenu" class="navmenu">
@@ -87,11 +87,34 @@
                     </li>
                     <li><a class="{{($title === "galeri")? 'active' : ''}}" href="/galeri">Galeri</a></li>
 
+
+                    @if(Auth::check())
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="font-family: arial; font-weight: 600" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ Auth::user()->name }}
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            style="font-family: arial; font-weight: 600"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                    </div>
+                </li>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
+                @else
+                <li class="nav-item">
+                    <a class="nav-link" href="/home" style="font-family: arial; font-weight: 600">{{ __('Login') }} </a>
+                </li>
+                @endif
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted" href="/home">Login</a>
+                
 
         </div>
     </header>
@@ -117,6 +140,7 @@
                         <a href=""><i class="bi bi-youtube"></i></a>
                         <a href=""><i class="bi bi-facebook"></i></a>
                         <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-twitter"></i></a>
                     </div>
                 </div>
 
@@ -134,9 +158,9 @@
                 <div class="col-lg-2 col-md-3 footer-links">
                     <h4>Contact</h4>
                     <ul>
-                        <p>St.Lenny Manurung</p>
+                        <p>WhatsApp:</p>
                         <p>+62 821-6776-3400</p>
-                        <p>Gr.Hekson Simbolon</p>
+                        <p>Telepon:</p>
                         <p>+62 852-6194-5886</p>
                     </ul>
                 </div>
@@ -166,6 +190,11 @@
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>

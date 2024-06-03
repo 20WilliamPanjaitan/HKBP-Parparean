@@ -1,21 +1,9 @@
 @extends('header')
+@section('title', 'Jadwal Ibadah')
 @section('header')
 
 
 <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-        <nav class="breadcrumbs">
-            <div class="breadcrumbs">
-                <ol class="breadcrumbs">
-                    <li class="breadcrumbs-item"><a href="index.html">Beranda</a></li>
-                    <li class="breadcrumbs-item"><a href="Berita.html">Berita</a></li>
-                    <li class="breadcrumbs-item active">Jadwal Ibadah</li>
-                </ol>
-            </div>
-        </nav>
-    </div><!-- End Page Title -->
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section">

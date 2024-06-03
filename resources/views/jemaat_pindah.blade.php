@@ -1,4 +1,5 @@
 @extends('header')
+@section('title', 'Jemaat Pindah')
 @section('header')
 
 

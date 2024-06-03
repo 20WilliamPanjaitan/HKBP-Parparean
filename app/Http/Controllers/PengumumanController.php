@@ -33,10 +33,14 @@ class PengumumanController extends Controller
         );
     }
 
-
     public function create()
     {
-        return view('admin.create_pengumuman');
+        return view(
+            'admin.create_pengumuman',
+            [
+                "title" => "pengumuman"
+            ]
+        );
     }
 
     public function store(Request $request)

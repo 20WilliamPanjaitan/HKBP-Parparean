@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Dashboard Admin HKBP Parparean</title>
+    <title>Edit Pengumuman</title>
 
     <!-- Custom fonts for this template-->
     <link href="../assets/img/logo-hkbp.png" rel="icon">
@@ -27,7 +27,7 @@
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index">
                 <div class="logo">
                     <img src="../img/HKBP-removebg-preview.png" alt="Logo" style="max-width: 63px; max-height: 63px" />
                 </div>
@@ -64,7 +64,7 @@
             </li>
 
             <!-- Nav Item  Berita -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseBerita"
                     aria-expanded="true" aria-controls="collapseBerita">
                     <i class="fas fa-bullhorn"></i>
@@ -89,8 +89,7 @@
                 <div id="collapseTentang" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="tables_sejarah.html">Sejarah</a>
-                        <a class="collapse-item" href="tables_visi_misi.html">Visi Misi</a>
+                        <a class="collapse-item" href="../jemaat">Jemaat</a>
                         <a class="collapse-item" href="../parhalado">Parhalado</a>
                     </div>
             </li>
@@ -105,12 +104,12 @@
                 <div id="collapseKoinonia" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="tables_dewan_koinonia.html">Dewan Koinonia</a>
-                        <a class="collapse-item" href="tables_sekolah_minggu.html"> Sekolah Minggu</a>
-                        <a class="collapse-item" href="tables_remaja.html"> Remaja</a>
-                        <a class="collapse-item" href="tables_naposo.html">Naposo</a>
-                        <a class="collapse-item" href="tables_parompuan.html">Parompuan</a>
-                        <a class="collapse-item" href="tables_ama.html">Ama</a>
+                        <a class="collapse-item" href="../koinonia">Dewan Koinonia</a>
+                        <a class="collapse-item" href="../sekolah_minggu"> Sekolah Minggu</a>
+                        <a class="collapse-item" href="../remaja"> Remaja</a>
+                        <a class="collapse-item" href="../naposo">Naposo</a>
+                        <a class="collapse-item" href="../parompuan">Parompuan</a>
+                        <a class="collapse-item" href="../ama">Ama</a>
                     </div>
             </li>
 
@@ -124,9 +123,9 @@
                 <div id="collapseMarturia" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="tables_dewan_marturia.html">Dewan Marturia</a>
-                        <a class="collapse-item" href="tables_sending.html">Sending</a>
-                        <a class="collapse-item" href="tables_musik.html">Musik</a>
+                        <a class="collapse-item" href="../dewan_marturia">Dewan Marturia</a>
+                        <a class="collapse-item" href="../sending">Sending</a>
+                        <a class="collapse-item" href="../musik">Musik</a>
                     </div>
             </li>
 
@@ -140,9 +139,9 @@
                 <div id="collapseDiakonia" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="tables_dewan_diakonia.html">Dewan Diakonia</a>
-                        <a class="collapse-item" href="tables_sosial.html">Sosial</a>
-                        <a class="collapse-item" href="tables_kemasyarakatan.html">Kemasyarakatan</a>
+                        <a class="collapse-item" href="../dewan_diakonia">Dewan Diakonia</a>
+                        <a class="collapse-item" href="../sosial">Sosial</a>
+                        <a class="collapse-item" href="../kemasyarakatan">Kemasyarakatan</a>
                     </div>
             </li>
 
@@ -151,6 +150,12 @@
                 <a class="nav-link" href="../galeri">
                     <i class="fas fa-images"></i>
                     <span>Galery</span></a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="../kontak">
+                    <i class="fas fa-phone"></i>
+                    <span>Kontak</span></a>
             </li>
 
             <!-- Divider -->
@@ -321,29 +326,26 @@
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                    <a class="btn btn-primary" href="../login.html">Logout<form id="logout-form"
-                            action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form></a>
-                </div>
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Siap untuk keluar?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Pilih "Logout" di bawah ini jika Anda siap untuk mengakhiri sesi Anda saat ini.
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+
+                <a class="btn btn-primary" href="{{route('logout')}}"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
             </div>
         </div>
     </div>
+</div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="../vendor/jquery/jquery.min.js"></script>

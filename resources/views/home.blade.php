@@ -1,23 +1,13 @@
-@extends('layouts.app')
+@if(Auth::user()->role == "admin")
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+<script>
+    // Redirect to another route immediately
+    window.location.href = "admin/index";
+</script>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+@else
+<script>
+    // Redirect to another route immediately
+    window.location.href = "beranda";
+</script>
+@endif

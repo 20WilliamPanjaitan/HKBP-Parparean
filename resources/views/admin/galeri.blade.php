@@ -1,27 +1,32 @@
 @extends('admin/side_bar')
+@section('title', 'Galeri')
 @section('side_bar')
 
 
 @if(session('success'))
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        // Tampilkan SweetAlert dengan pesan flash
-        Swal.fire({
-            icon: 'success',
-            title: 'Success!',
-            text: '{{ session('success') }}',
-        });
-    </script>
-    @elseif (session('success_tambah'))
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        // Tampilkan SweetAlert dengan pesan flash
-        Swal.fire({
-            icon: 'success',
-            title: 'Success Tambah!',
-            text: '{{ session('success_tambah') }}',
-        });
-    </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    // Tampilkan SweetAlert dengan pesan flash
+    Swal.fire({
+        icon: 'success',
+        title: 'Success!',
+        text: '{{ session('
+        success ') }}',
+    });
+
+</script>
+@elseif (session('success_tambah'))
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    // Tampilkan SweetAlert dengan pesan flash
+    Swal.fire({
+        icon: 'success',
+        title: 'Success Tambah!',
+        text: '{{ session('
+        success_tambah ') }}',
+    });
+
+</script>
 @endif
 
 <!-- Begin Page Content -->
@@ -43,8 +48,9 @@
                     <thead>
                         <tr>
                             <th>Judul</th>
-                            <th>Gambar</th>
+                            <th>Status</th>
                             <th>Keterangan</th>
+                            <th>Gambar</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -53,11 +59,13 @@
 
                         <tr>
                             <td>{{$galeris->judul}}</td>
-                            <td><img src="../images/{{$galeris->foto}}" width="120px" class="img-fluid" alt="" >
-                            </td>
+                            <td>{{$galeris->status}}</td>
                             <td>{{$galeris->keterangan}}</td>
+                            <td><img src="../images/{{$galeris->foto}}" width="120px" class="img-fluid" alt="">
+                            </td>
                             <td>
-                                <a href="#" class="btn btn-primary btn-sm">Edit</a>
+                                <a href="{{ route('galeri.edit', ['id' => $galeris->id]) }}"
+                                    class="btn btn-primary btn-sm">Edit</a>
                                 <a href="#" class="btn btn-danger btn-sm">Hapus</a>
                             </td>
                         </tr>

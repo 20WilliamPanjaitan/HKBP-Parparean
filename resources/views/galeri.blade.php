@@ -1,4 +1,5 @@
 @extends('header')
+@section('title', 'Galeri')
 @section('header')
 
 <main class="main">

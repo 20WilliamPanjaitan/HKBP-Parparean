@@ -1,3 +1,4 @@
+@section('title', 'Pra Nikah')
 @extends('header')
 @section('header')
 
@@ -13,7 +14,8 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                         <div class="course-item">
-                            <form action="#" method="post">
+                        <form action="{{ route('pranikah.store') }}" method="post" enctype="multipart/form-data">
+                         @csrf
                                 <div class="form-group mb-3">
                                     <label for="nama">Nama</label>
                                     <input type="text" class="form-control" id="nama" name="nama"

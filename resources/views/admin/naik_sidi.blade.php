@@ -1,4 +1,5 @@
 @extends('admin/side_bar')
+@section('title', 'Jemaat')
 @section('side_bar')
 
 

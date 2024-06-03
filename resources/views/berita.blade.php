@@ -1,19 +1,10 @@
 @extends('header')
+@section('title', 'Berita')
 @section('header')
 
     <main class="main">
 
-        <!-- Page Title -->
-        <div class="page-title" data-aos="fade">
-            <nav class="breadcrumbs">
-                <div class="container">
-                    <ol>
-                        <li><a href="index.html">Beranda</a></li>
-                        <li class="current">Berita<br></li>
-                    </ol>
-                </div>
-            </nav>
-        </div><!-- End Page Title -->
+
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel"
             style="height: 350px;">
             <div class="carousel-indicators">
@@ -84,33 +75,19 @@
                                     }
 
                                 </style>
+                                @foreach ($berita as $item)
+                                    
                                 <div class="card" style="width: 18rem;">
-                                    <img src="assets/img/pernikahan.jpeg" class="card-img-top" alt="Pernikahan">
+                                    <img src="images/{{$item->foto}}" class="card-img-top" alt="Pernikahan">
                                     <div class="card-body">
-                                        <h5 class="card-title">Pernikahan</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the card's content.</p>
-                                        <a href="Pengumuman.html" class="btn btn-primary">Selengkapnya</a>
+                                        <h5 class="card-title">{{$item->judul}}</h5>
+                                        <p class="card-text">{{$item->keterangan}}</p>
+                                        {{-- <a href="Pengumuman.html" class="btn btn-primary">Selengkapnya</a> --}}
                                     </div>
                                 </div><!-- End testimonial item -->
-                                <div class="card" style="width: 18rem;">
-                                    <img src="assets/img/Sidi.jpg" class="card-img-top" alt="Sidi">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Naik Sidi</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the card's content.</p>
-                                        <a href="Pengumuman.html" class="btn btn-primary">Selengkapnya</a>
-                                    </div>
-                                </div><!-- End testimonial item -->
-                                <div class="card" style="width: 18rem;">
-                                    <img src="assets/img/babtis.jpeg" class="card-img-top" alt="tardidi">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Tardidi</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the card's content.</p>
-                                        <a href="Pengumuman.html" class="btn btn-primary">Selengkapnya</a>
-                                    </div>
-                                </div><!-- End testimonial item -->
+                                @endforeach
+
+                                
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>

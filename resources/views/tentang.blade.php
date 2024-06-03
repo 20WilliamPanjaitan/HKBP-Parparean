@@ -1,4 +1,5 @@
 @extends('header')
+@section('title', 'Tentang')
 @section('header')
 
 
@@ -9,29 +10,25 @@
                 <div class="col-lg-6">
                     <div class="row g-3">
                         <div class="col-6 text-end">
-                            <img class="img-fluid bg-white w-100 mb-3 wow fadeIn" data-wow-delay="0.1s"
-                                src="assets/img/gereja1.jpg" alt="">
+                            <img class="img-fluid   mb-3  " data-wow-delay="0.1s" src="images/gereja1.jpg" alt="">
                             <img class="img-fluid bg-white w-50 wow fadeIn" data-wow-delay="0.2s"
-                                src="assets/img/gereja2..jpg" alt="">
+                                src="images/gereja2.jpg" alt="">
                         </div>
                         <div class="col-6">
                             <img class="img-fluid bg-white w-50 mb-3 wow fadeIn" data-wow-delay="0.3s"
-                                src="assets/img/gereja3.jpg" alt="">
+                                src="images/gereja3.jpg" alt="">
                             <img class="img-fluid bg-white w-100 wow fadeIn" data-wow-delay="0.4s"
-                                src="assets/img/gereja4.jpg" alt="">
+                                src="images/gereja4.jpg" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <div class="section-title">
                         <p class="fs-5 fw-medium fst-italic text-primary">Sejarah </p>
-                        <h3 class="fw-bold mb-5">Gereja HKBP Parparean</h3>
+                        <h3 class="fw-bold">Gereja HKBP Parparean</h3>
                     </div>
                     <div class="row g-3 mb-4">
-                        <div class="col-sm-4">
-                            <img class="img-fluid bg-white w-100" src="img/about-5.jpg" alt="">
-                        </div>
-                        <div class="col-sm-8">
+                        <div class="col-sm-12">
                             <p>Gereja HKBP Parparean memiliki sejarah yang kaya dan berakar dalam perjalanan panjang
                                 iman dan pengabdian. Berdiri di tengah-tengah masyarakat Batak, gereja ini telah menjadi
                                 landasan keagamaan bagi banyak generasi. Sejarahnya yang dimulai dari zaman penjajahan
@@ -41,19 +38,40 @@
                                 mempersatukan umat dalam kepercayaan dan pengharapan. </p>
                         </div>
                     </div>
-                    <div class="border-top mb-4"></div>
-                    <div class="row g-3">
-                        <div class="col-sm-8">
-                            <p class="mb-0">"Dalam perjalanan panjang kami sebagai komunitas iman, kami telah diberkati
-                                dengan warisan yang kaya akan pengabdian, pengorbanan, dan keberanian dari
-                                generasi-generasi sebelum kami. Sejarah gereja kami adalah bukti cinta Allah yang terus
-                                mengalir melalui zaman, menginspirasi kami untuk meneruskan misi-Nya dengan penuh
-                                semangat dan keberanian. Mari kita bersama-sama merenungkan warisan ini dengan rendah
-                                hati, mengambil inspirasi dari mereka yang telah berjalan di jalan iman sebelum kita,
-                                sambil menjaga api iman kami tetap menyala dalam setiap langkah yang kami ambil."</p>
+                </div>
+            </div><br>
+
+
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="section-title">
+                        <p class="fs-5 fw-medium fst-italic text-primary">Tentang </p>
+                        <h3 class="fw-bold ">Gereja HKBP Parparean</h3>
+                    </div>
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-12">
+                            <p>Gereja HKBP Parparean memiliki sejarah yang kaya dan berakar dalam perjalanan panjang
+                                iman dan pengabdian. Berdiri di tengah-tengah masyarakat Batak, gereja ini telah menjadi
+                                landasan keagamaan bagi banyak generasi. Sejarahnya yang dimulai dari zaman penjajahan
+                                Belanda hingga era modern menandai perjalanan gereja ini dalam melayani dan memperkuat
+                                iman jemaatnya. Dengan tekad yang kokoh dan semangat pelayanan yang tulus, Gereja HKBP
+                                Parparean terus menerus berkembang sebagai pusat rohani dan tempat pertemuan yang
+                                mempersatukan umat dalam kepercayaan dan pengharapan. </p>
                         </div>
-                        <div class="col-sm-4">
-                            <img class="img-fluid bg-white w-100" src="img/about-6.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6 text-end">
+                            <img class="img-fluid   mb-3  " data-wow-delay="0.1s" src="images/gereja5.jpg" alt="">
+                            <img class="img-fluid bg-white w-50 wow fadeIn" data-wow-delay="0.2s"
+                                src="images/gereja6.jpg" alt="">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid bg-white w-50 mb-3 wow fadeIn" data-wow-delay="0.3s"
+                                src="images/gereja7.jpg" alt="">
+                            <img class="img-fluid bg-white w-100 wow fadeIn" data-wow-delay="0.4s"
+                                src="images/gereja8.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -106,44 +124,50 @@
 
     </script>
 
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Parhalado</h2>
+        <p class="">Parhalado HKBP Parparean</p>
+    </div>
+    <!-- End Section Title -->
+    <section id="trainers-index" class="section trainers-index">
+        <div class="container">
+            <div class="row">
+                @foreach ($parhalado_fulltimer as $item)
+                <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member">
+                        <img src="images/{{$item->foto}}" class="img-fluid" alt="" />
+                        <div class="member-content">
+                            <h4>{{$item->nama}}</h4>
+                            <span>{{$item->jabatan}}</span>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
 
     <section id="trainers-index" class="section trainers-index">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+                @foreach ($parhalado as $item)
+                <div class="col-lg-3 col-md-4 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="member">
-                        <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="" />
+                        <img src="images/{{$item->foto}}" class="img-fluid" alt="" />
                         <div class="member-content">
-                            <h4>Pdt. Anggiat Simanjuntak S.Th</h4>
-                            <span>Pendeta Gereja HKBP Parparean</span>
+                            <h4>{{$item->nama}}</h4>
+                            <span>{{$item->jabatan}}</span>
+                            <span>{{$item->sektor->nama_sektor}}</span>
                         </div>
                     </div>
                 </div>
-                <!-- End Team Member -->
+                @endforeach
+            </div>
+        </div>
+    </section>
 
-                <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-                    <div class="member">
-                        <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="" />
-                        <div class="member-content">
-                            <h4>Biv. Lastriana Lumban Gaol</h4>
-                            <span>Bibelvrow HKBP Parparean</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Team Member -->
 
-                <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-                    <div class="member">
-                        <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="" />
-                        <div class="member-content">
-                            <h4>Gr. Hekson Simbolon</h4>
-                            <span>Guru Huria HKBP Parparean</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Team Member -->
-
-                <!-- /Tentang Section -->
 </main>
 
 

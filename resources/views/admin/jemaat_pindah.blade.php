@@ -1,4 +1,5 @@
 @extends('admin/side_bar')
+@section('title', 'Jemaat Pindah')
 @section('side_bar')
 
                 <!-- Begin Page Content -->

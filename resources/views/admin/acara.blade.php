@@ -1,26 +1,31 @@
 @extends('admin/side_bar')
+@section('title', 'Acara')
 @section('side_bar')
 
 @if(session('success'))
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        // Tampilkan SweetAlert dengan pesan flash
-        Swal.fire({
-            icon: 'success',
-            title: 'Success!',
-            text: '{{ session('success') }}',
-        });
-    </script>
-    @elseif (session('success_tambah'))
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        // Tampilkan SweetAlert dengan pesan flash
-        Swal.fire({
-            icon: 'success',
-            title: 'Success Tambah!',
-            text: '{{ session('success_tambah') }}',
-        });
-    </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    // Tampilkan SweetAlert dengan pesan flash
+    Swal.fire({
+        icon: 'success',
+        title: 'Success!',
+        text: '{{ session('
+        success ') }}',
+    });
+
+</script>
+@elseif (session('success_tambah'))
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    // Tampilkan SweetAlert dengan pesan flash
+    Swal.fire({
+        icon: 'success',
+        title: 'Success Tambah!',
+        text: '{{ session('
+        success_tambah ') }}',
+    });
+
+</script>
 @endif
 <!-- Begin Page Content -->
 <div class="container-fluid">
@@ -58,7 +63,8 @@
                             <td><img src="../images/{{$acaras->foto}}" width="100px" alt=""></td>
                             <td>{{$acaras->keterangan}}</td>
                             <td>
-                                <a href="{{ route('acara.edit', ['id' => $acaras->id]) }}" class="btn btn-primary btn-sm">Edit</a>
+                                <a href="{{ route('acara.edit', ['id' => $acaras->id]) }}"
+                                    class="btn btn-primary btn-sm">Edit</a>
                                 <a href="#">
                                     <form action="{{route('hapus_acara', $acaras)}}" method="POST">
                                         @csrf

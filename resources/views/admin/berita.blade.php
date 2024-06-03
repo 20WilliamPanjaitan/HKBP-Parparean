@@ -1,4 +1,5 @@
 @extends('admin/side_bar')
+@section('title', 'Berita')
 @section('side_bar')
 
 @if(session('success'))

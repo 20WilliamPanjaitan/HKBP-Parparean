@@ -1,4 +1,5 @@
 @extends('admin/side_bar')
+@section('title', 'Babtis')
 @section('side_bar')
 
 

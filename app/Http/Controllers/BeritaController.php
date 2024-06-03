@@ -8,10 +8,14 @@ use Illuminate\Http\Request;
 class BeritaController extends Controller
 {
     public function index()
+
     {
+        $berita = Berita::get();
+
         return view(
             'berita',
             [
+                'berita' => $berita,
                 "title" => "berita"
             ]
         );
@@ -33,7 +37,12 @@ class BeritaController extends Controller
 
     public function create()
     {
-        return view('admin.create_berita');
+        return view(
+            'admin.create_berita',
+            [
+                "title" => "berita"
+            ]
+        );
     }
 
     public function store(Request $request)
@@ -99,11 +108,6 @@ class BeritaController extends Controller
 
             // Simpan nama file foto ke dalam database
             $berita->foto = $namaFoto;
-
-            // // Hapus foto lama jika ada
-            // if ($berita->foto && file_exists(public_path($berita->foto))) {
-            //     unlink(public_path($berita->foto));
-            // }
         }
 
         $berita->save();

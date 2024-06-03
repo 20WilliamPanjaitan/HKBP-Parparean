@@ -41,7 +41,12 @@ class AcaraController extends Controller
 
     public function create()
     {
-        return view('admin/tambah_acara');
+        return view(
+            'admin.tambah_acara',
+            [
+                "title" => "acara"
+            ]
+        );
     }
 
 
@@ -86,48 +91,6 @@ class AcaraController extends Controller
         return view('admin.edit_acara', compact('acara'));
     }
 
-    // public function update(Request $request, $id)
-    // {
-    //     // Validasi data yang dikirim dari form
-    //     $validatedData = $request->validate([
-    //         'nama_acara' => 'required|string|max:255',
-    //         'lokasi_acara' => 'required|string|max:255',
-    //         'jenis_acara' => 'required|string|max:255',
-    //         'waktu_pelaksanaan' => 'required|date',
-    //         'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // File gambar dengan maksimum 2MB
-    //         'keterangan' => 'required|string|max:255',
-    //     ]);
-
-    //     $acara = Acara::find($id);
-    //     if (!$acara) {
-    //         return redirect()->route('admin_acara')->with('error', 'Acara tidak ditemukan');
-    //     }
-
-    //     $acara->nama_acara = $validatedData['nama_acara'];
-    //     $acara->lokasi_acara = $validatedData['lokasi_acara'];
-    //     $acara->jenis_acara = $validatedData['jenis_acara'];
-    //     $acara->waktu_pelaksanaan = $validatedData['waktu_pelaksanaan'];
-    //     $acara->keterangan = $validatedData['keterangan'];
-
-    //     if ($request->hasFile('foto') && $request->file('foto')->isValid()) {
-    //         // Jika ada file foto baru diunggah
-    //         $fileFoto = $request->file('foto');
-    //         $namaFoto = $fileFoto->getClientOriginalName(); // Mendapatkan nama asli file foto
-    //         $fileFoto->move('images', $namaFoto); // Menyimpan file foto ke folder 'images'
-    //         $acara->foto = $namaFoto; // Simpan nama file foto ke dalam database
-
-    //         // Hapus foto lama jika ada
-    //         if ($acara->foto && file_exists(public_path('images/' . $acara->foto))) {
-    //             unlink(public_path('images/' . $acara->foto));
-    //         }
-    //     }
-
-    //     $acara->save();
-
-    //     return redirect()->route('admin_acara')->with('success', 'Acara berhasil diperbarui');
-    // }
-
-
 
 
     public function update(Request $request, $id)
@@ -142,6 +105,8 @@ class AcaraController extends Controller
         $acara->jenis_acara = $request->input('jenis_acara');
         $acara->waktu_pelaksanaan = $request->input('waktu_pelaksanaan');
         $acara->keterangan = $request->input('keterangan');
+        $acara->foto = $request->input('foto');
+
 
         // Cek apakah ada file foto baru yang diunggah
         if ($request->hasFile('foto')) {
@@ -155,11 +120,6 @@ class AcaraController extends Controller
 
             // Simpan nama file foto ke dalam database
             $acara->foto = $namaFoto;
-
-            // // Hapus foto lama jika ada
-            // if ($acara->foto && file_exists(public_path($acara->foto))) {
-            //     unlink(public_path($acara->foto));
-            // }
         }
 
         $acara->save();

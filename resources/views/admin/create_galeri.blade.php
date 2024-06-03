@@ -1,4 +1,5 @@
 @extends('admin/side_bar')
+@section('title', 'Tambah Galeri')
 @section('side_bar')
     <!-- Page Heading -->
     <main>

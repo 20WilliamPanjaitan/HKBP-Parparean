@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Dashboard Admin HKBP Parparean</title>
+    <title>@yield('title')</title>
 
     <!-- Custom fonts for this template-->
     <link href="../assets/img/logo-hkbp.png" rel="icon">
@@ -27,7 +27,7 @@
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index">
                 <div class="logo">
                     <img src="img/HKBP-removebg-preview.png" alt="Logo" style="max-width: 63px; max-height: 63px" />
                 </div>
@@ -38,33 +38,16 @@
             <hr class="sidebar-divider my-0" />
 
             <!-- Nav Item - Beranda -->
-            <li class="nav-item ">
+            <li class="nav-item {{($title === "beranda")? 'active' : ''}}">
                 <a class="nav-link" href="index">
                     <i class="fas fa-home"></i>
                     <span>Beranda</span></a>
             </li>
 
-            <!-- Nav Item  Layanan -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayanan"
-                    aria-expanded="true" aria-controls="collapseLayanan">
-                    <i class="fas fa-church"></i>
-                    <span>Layanan</span>
-                </a>
-                <div id="collapseLayanan" class="collapse" aria-labelledby="headingPages"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="pranikah">Pranikah</a>
-                        <a class="collapse-item" href="pernikahan"> Pernikahan</a>
-                        <a class="collapse-item" href="naik_sidi"> Naiki Sidi</a>
-                        <a class="collapse-item" href="babtis"> Babtis</a>
-                        <a class="collapse-item" href="jemaat_baru"> Jemaat Baru</a>
-                        <a class="collapse-item" href="jemaat_pindah"> Permohonan Pindah</a>
-                    </div>
-            </li>
+            
 
             <!-- Nav Item  Berita -->
-            <li class="nav-item">
+            <li class="nav-item {{($title === "berita")? 'active' : ''}}">
                 <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseBerita"
                     aria-expanded="true" aria-controls="collapseBerita">
                     <i class="fas fa-bullhorn"></i>
@@ -80,7 +63,7 @@
             </li>
 
             <!-- Nav Item  Tentang -->
-            <li class="nav-item">
+            <li class="nav-item {{($title === "tentang")? 'active' : ''}}">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTentang"
                     aria-expanded="true" aria-controls="collapseTentang">
                     <i class="fas fa-info-circle"></i>
@@ -89,14 +72,34 @@
                 <div id="collapseTentang" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="tables_sejarah.html">Sejarah</a>
-                        <a class="collapse-item" href="tables_visi_misi.html">Visi Misi</a>
+                        <a class="collapse-item" href="jemaat">Jemaat</a>
                         <a class="collapse-item" href="parhalado">Parhalado</a>
                     </div>
             </li>
 
+
+            <!-- Nav Item  Layanan -->
+            <li class="nav-item {{($title === "layanan")? 'active' : ''}}">
+                <a class="nav-link collapsed " href="#" data-toggle="collapse" data-target="#collapseLayanan"
+                    aria-expanded="true" aria-controls="collapseLayanan">
+                    <i class="fas fa-church"></i>
+                    <span>Layanan</span>
+                </a>
+                <div id="collapseLayanan" class="collapse" aria-labelledby="headingPages"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="renungan_harian">Renungan Harian</a>
+                        <a class="collapse-item" href="pranikah">Pranikah</a>
+                        <a class="collapse-item" href="pernikahan"> Pernikahan</a>
+                        <a class="collapse-item" href="naik_sidi"> Naiki Sidi</a>
+                        <a class="collapse-item" href="babtis"> Babtis</a>
+                        <a class="collapse-item" href="jemaat_baru"> Jemaat Baru</a>
+                        <a class="collapse-item" href="jemaat_pindah"> Permohonan Pindah</a>
+                    </div>
+            </li>
+
             <!-- Nav Item  Koinonia -->
-            <li class="nav-item">
+            <li class="nav-item {{($title === "koinonia")? 'active' : ''}}">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseKoinonia"
                     aria-expanded="true" aria-controls="collapseKoinonia">
                     <i class="fas fa-users"></i>
@@ -105,17 +108,17 @@
                 <div id="collapseKoinonia" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="tables_dewan_koinonia.html">Dewan Koinonia</a>
-                        <a class="collapse-item" href="tables_sekolah_minggu.html"> Sekolah Minggu</a>
-                        <a class="collapse-item" href="tables_remaja.html"> Remaja</a>
-                        <a class="collapse-item" href="tables_naposo.html">Naposo</a>
-                        <a class="collapse-item" href="tables_parompuan.html">Parompuan</a>
-                        <a class="collapse-item" href="tables_ama.html">Ama</a>
+                        {{-- <a class="collapse-item" href="dewan_koinonia">Dewan Koinonia</a> --}}
+                        <a class="collapse-item" href="sekolah_minggu"> Sekolah Minggu</a>
+                        <a class="collapse-item" href="remaja"> Remaja</a>
+                        <a class="collapse-item" href="naposo">Naposo</a>
+                        <a class="collapse-item" href="parompuan">Parompuan</a>
+                        <a class="collapse-item" href="ama">Ama</a>
                     </div>
             </li>
 
             <!-- Nav Item  Marturia -->
-            <li class="nav-item">
+            <li class="nav-item {{($title === "marturia")? 'active' : ''}}">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMarturia"
                     aria-expanded="true" aria-controls="collapseMarturia">
                     <i class="fas fa-newspaper"></i>
@@ -124,14 +127,14 @@
                 <div id="collapseMarturia" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="tables_dewan_marturia.html">Dewan Marturia</a>
-                        <a class="collapse-item" href="tables_sending.html">Sending</a>
-                        <a class="collapse-item" href="tables_musik.html">Musik</a>
+                        {{-- <a class="collapse-item" href="dewan_marturia">Dewan Marturia</a> --}}
+                        <a class="collapse-item" href="sending">Sending</a>
+                        <a class="collapse-item" href="musik">Musik</a>
                     </div>
             </li>
 
             <!-- Nav Item  Diakonia -->
-            <li class="nav-item">
+            <li class="nav-item {{($title === "diakonia")? 'active' : ''}}">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDiakonia"
                     aria-expanded="true" aria-controls="collapseDiakonia">
                     <i class="fas fa-hands-helping"></i>
@@ -140,17 +143,23 @@
                 <div id="collapseDiakonia" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="tables_dewan_diakonia.html">Dewan Diakonia</a>
-                        <a class="collapse-item" href="tables_sosial.html">Sosial</a>
-                        <a class="collapse-item" href="tables_kemasyarakatan.html">Kemasyarakatan</a>
+                        {{-- <a class="collapse-item" href="dewan_diakonia">Dewan Diakonia</a> --}}
+                        <a class="collapse-item" href="sosial">Sosial</a>
+                        <a class="collapse-item" href="kemasyarakatan">Kemasyarakatan</a>
                     </div>
             </li>
 
             <!-- Nav Item - Galery -->
-            <li class="nav-item ">
-                <a class="nav-link" href="galeri">
+            <li class="nav-item {{($title === "galeri")? 'active' : ''}}">
+                <a class="nav-link"  href="galeri">
                     <i class="fas fa-images"></i>
                     <span>Galery</span></a>
+            </li>
+
+            <li class="nav-item {{($title === "kontak")? 'active' : ''}}">
+                <a class="nav-link"  href="kontak">
+                    <i class="fas fa-phone"></i>
+                    <span>Kontak</span></a>
             </li>
 
             <!-- Divider -->
@@ -215,19 +224,18 @@
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg" />
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    
-                                    Logout
-                                </a>
-                            </div>
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                    aria-labelledby="userDropdown">
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Profile
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Logout
+                                    </a>
+                                </div>
                         </li>
                     </ul>
                 </nav>
@@ -264,20 +272,16 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Siap untuk keluar?</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                     </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-body">Pilih "Logout" di bawah ini jika Anda siap untuk mengakhiri sesi Anda saat ini.</div>
                     <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                        <a class="btn btn-primary" href="login.html">Logout<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form></a>
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                        
+                        <a class="btn btn-primary" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >Logout</a>
                     </div>
                 </div>
             </div>

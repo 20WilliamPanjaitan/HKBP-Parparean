@@ -1,4 +1,5 @@
     @extends('header')
+    @section('title', 'Beranda')
     @section('header')
 
     <main class="main">
@@ -14,9 +15,7 @@
                     <br>maka semuanya itu akan ditambahkan kepadamu.</h2>
                 <p data-aos="fade-up" data-aos-delay="200">Matius 6:33
                 </p>
-                <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
-                    <a href="courses.html" class="btn-get-started">Get Started</a>
-                </div>
+
             </div>
         </section><!-- /Hero Section -->
 
@@ -27,7 +26,7 @@
                 <div class="row gy-4">
                     <div class="col-lg-4 col-md-4">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="{{$jemaat}}" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p class="">Jemaat</p>
                         </div>
@@ -37,13 +36,13 @@
                         <div class="stats-item text-center w-100 h-100">
                             <span data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="1"
                                 class="purecounter"></span>
-                            <p class="">Keluarga</p>
+                            <p class="">Dewan</p>
                         </div>
                     </div><!-- End Stats Item -->
 
                     <div class="col-lg-4 col-md-4">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="{{$parhalado}}" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p class="">Parhalado</p>
                         </div>
@@ -69,7 +68,7 @@
                             <img src="images/{{$beritas->foto}}" class="img-fluid" alt="...">
                             <div class="course-content">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <button class="btn btn-primary">Selengkapnya</button>
+                                    {{-- <button class="btn btn-primary">Selengkapnya</button> --}}
                                 </div>
                                 <h3>{{$beritas->judul}}</h3>
                                 <p class="description">{{$beritas->keterangan}}</p>
@@ -163,31 +162,27 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="table-responsive">
-                                <table class="table table-vcenter card-table table-striped">
+                                <table class="table table-vcenter card-table table-striped" style="text-align: center">
                                     <thead>
                                         <tr>
                                             <th>Nama Minggu</th>
-                                            <th>Judul</th>
                                             <th>Tanggal</th>
-                                            <th>Keterangan</th>
-                                            <th class="w-1"></th>
+                                            <th class="w-1">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($ibadah as $ibadahs)
+                                        @foreach ($ibadah as $item)
                                         <tr>
-                                            <td>{{$ibadahs->nama_ibadah}}</td>
+                                            <td>{{$item->ibadah->nama_ibadah}}</td>
+                                            
                                             <td class="text-muted">
-                                                Kebangkitan Tuhan Yesus Kristus
-                                            </td>
-                                            <td class="text-muted">
-                                                {{$ibadahs->tanggal_ibadah}}
-                                            </td>
-                                            <td class="text-muted">
-                                                Ibadah Minggu
+                                                {{$item->ibadah->tanggal_ibadah}}
                                             </td>
                                             <td>
-                                                <a href="#">Unduh</a>
+                                                <a href="{{ route('download_tata_ibadah', ['id' => $item->id]) }}" class="btn btn-primary btn-sm">Unduh</a>
+                                                <a href="{{ route('view_tata_ibadah', ['id' => $item->id]) }}" class="btn btn-primary btn-sm">Lihat</a>
+
+                                                
                                             </td>
                                         </tr>
                                         @endforeach
@@ -213,22 +208,22 @@
                     <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
                         <div class="member">
                             @foreach ($pendeta as $pendetas)
-                            <img src="assets/img/{{$pendetas->foto}}" class="img-fluid" alt="">
+                            <img src="images/{{$pendetas->foto}}" class="img-fluid" alt="">
                             <div class="member-content">
 
                                 <h4>{{$pendetas->nama}}</h4>
                                 <span>{{$pendetas->jabatan}}</span>
-                                <p>
+                                {{-- <p>
                                     Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis
                                     quaerat qui aut
                                     aut aut
-                                </p>
-                                <div class="social">
+                                </p> --}}
+                                {{-- <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
                                     <a href=""><i class="bi bi-instagram"></i></a>
                                     <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
+                                </div> --}}
 
                             </div>
                             @endforeach
@@ -238,22 +233,22 @@
                     <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
                         <div class="member">
                             @foreach ($bibel as $bibels)
-                            <img src="assets/img/{{$bibels->foto}}" class="img-fluid" alt="">
+                            <img src="images/{{$bibels->foto}}" class="img-fluid" alt="">
                             <div class="member-content">
 
                                 <h4>{{$bibels->nama}}</h4>
                                 <span>{{$bibels->jabatan}}</span>
-                                <p>
+                                {{-- <p>
                                     Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis
                                     quaerat qui aut
                                     aut aut
-                                </p>
-                                <div class="social">
+                                </p> --}}
+                                {{-- <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
                                     <a href=""><i class="bi bi-instagram"></i></a>
                                     <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
+                                </div> --}}
                             </div>
                             @endforeach
                         </div>
@@ -262,21 +257,21 @@
                     <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
                         <div class="member">
                             @foreach ($guru as $gurus)
-                            <img src="assets/img/{{$gurus->foto}}" class="img-fluid" alt="">
+                            <img src="images/{{$gurus->foto}}" class="img-fluid" alt="">
                             <div class="member-content">
                                 <h4>{{$gurus->nama}}</h4>
                                 <span>{{$gurus->jabatan}}</span>
-                                <p>
+                                {{-- <p>
                                     Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis
                                     quaerat qui aut
                                     aut aut
-                                </p>
-                                <div class="social">
+                                </p> --}}
+                                {{-- <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
                                     <a href=""><i class="bi bi-instagram"></i></a>
                                     <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
+                                </div> --}}
                             </div>
                             @endforeach
                         </div>

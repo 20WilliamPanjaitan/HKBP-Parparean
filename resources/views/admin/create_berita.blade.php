@@ -1,4 +1,5 @@
 @extends('admin/side_bar')
+@section('title', 'Tambah Berita')
 @section('side_bar')
 <!-- Page Heading -->
 <main>

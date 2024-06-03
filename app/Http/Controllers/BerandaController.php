@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Berita;
 use App\Models\Ibadah;
+use App\Models\Jemaat;
 use App\Models\Kontak;
 use App\Models\Parhalado;
 use App\Models\Renungan_Harian;
+use App\Models\Tata_Ibadah;
 use Illuminate\Http\Request;
 
 class BerandaController extends Controller
@@ -14,19 +16,24 @@ class BerandaController extends Controller
     public function index()
     {
         $renungan = Renungan_Harian::where('status', 'Tampilkan')->get();
-        $ibadah = Ibadah::get();
+        $tata_ibadah = Tata_Ibadah::get();
         $pendeta = Parhalado::where('jabatan', 'Pendeta')->get();
         $bibel = Parhalado::where('jabatan', 'Bibelvrow')->get();
         $guru = Parhalado::where('jabatan', 'Guru Huria')->get();
         $berita = Berita::take(3)->get();
+        $parhalado = Parhalado::count();
+        $jemaat = Jemaat::whereIn('status', ['Aktif', 'NonAktif'])->count();
+
 
         return view('beranda', [
             'renungan' => $renungan,
-            'ibadah' => $ibadah,
+            'ibadah' => $tata_ibadah,
             'pendeta' => $pendeta,
             'bibel' => $bibel,
             'guru' => $guru,
             'berita' => $berita,
+            'parhalado' => $parhalado,
+            'jemaat' => $jemaat,
             'title' => 'beranda'
         ]);
     }
@@ -34,18 +41,22 @@ class BerandaController extends Controller
 
     public function kontak()
     {
-        return view('header', [
-            'kontaks' => Kontak::get()
-        ]);
+        $kontaks = Kontak::all();
+        return view('header', ['kontaks' => $kontaks]);
     }
 
 
     public function index_admin()
     {
+        $parhalado = Parhalado::count();
+        $jemaat = Jemaat::count();
+
         return view(
             'admin/index',
             [
-                "title" => "index"
+                'parhalado' => $parhalado,
+                'jemaat' => $jemaat,
+                'title' => "beranda",
             ]
         );
     }

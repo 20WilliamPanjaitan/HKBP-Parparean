@@ -1,4 +1,5 @@
 @extends('admin/side_bar')
+@section('title', 'Pernikahan')
 @section('side_bar')
 
         <!-- Begin Page Content -->
